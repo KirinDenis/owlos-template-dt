@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Dentária Trenčín — Moderná stomatológia s úsmevom</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dentária Trenčín — moderná stomatologická klinika. Implantáty, ortodoncia, estetické zubné lekárstvo. 3D diagnostika, sedácia, bezbolestné ošetrenie.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Demo disclaimer — remove this block when deploying as a real website -->
+<div id="owlos-demo-banner">
+  <span>⚠️ This is a <strong>template demo</strong> — not a real website. Replace all placeholder content before going live.</span>
+  <button id="owlos-demo-ok">Got it</button>
+</div>
+
+<div class="ambient-shape s1"></div>
+<div class="ambient-shape s2"></div>
+
+<!-- ── NAV ───────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <a href="#" class="brand">
+    <span class="brand-mark">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2c-3 0-5 2-7 2-1 0-2 1-2 3 0 4 2 8 3 12 0 1 1 2 2 2s1-1 2-3c1-2 1-4 2-4s1 2 2 4c1 2 1 3 2 3s2-1 2-2c1-4 3-8 3-12 0-2-1-3-2-3-2 0-4-2-7-2z"/>
+      </svg>
+    </span>
+    Dentária<span class="brand-dot">.</span>tn
+  </a>
+  <ul class="nav-menu">
+    <li><a class="nav-link" href="#sluzby">Služby</a></li>
+    <li><a class="nav-link" href="#technologia">Technológia</a></li>
+    <li><a class="nav-link" href="#tim">Náš tím</a></li>
+    <li><a class="nav-link" href="#galeria">Galéria</a></li>
+    <li><a class="nav-link" href="#recenzie">Recenzie</a></li>
+  </ul>
+  <a href="#objednanie" class="nav-cta">
+    Objednať sa
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="eyebrow">Trenčín · Slovenská republika</span>
+        <h1>Úsmev, ktorý si <em>zaslúžite</em> — bez kompromisov.</h1>
+        <p class="lede">
+          Moderná stomatologická klinika v centre Trenčína. Implantáty, ortodoncia,
+          estetické zubné lekárstvo. <strong>3D diagnostika, šetrné ošetrenie, transparentné ceny.</strong>
+        </p>
+        <div class="hero-cta">
+          <a href="#objednanie" class="btn btn-primary">Bezplatná konzultácia <span class="arr">→</span></a>
+          <a href="#technologia" class="btn btn-ghost">Pozrite si technológiu</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num"><em>15</em>+</div><div class="stat-lbl">rokov praxe</div></div>
+          <div><div class="stat-num">8 200<em>+</em></div><div class="stat-lbl">spokojných pacientov</div></div>
+          <div><div class="stat-num">4.9<em>/5</em></div><div class="stat-lbl">priemerné hodnotenie</div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-3d">
+          <div class="hero-3d-label"><span class="pulse"></span> 3D model · interaktívny</div>
+          <canvas id="tooth3d"></canvas>
+        </div>
+        <div class="hero-photo-card">
+          <img src="images/placeholder.svg" alt="Dental clinic interior" loading="lazy">
+          <div class="ribbon">
+            Naša klinika v Trenčíne
+            <small>otvorené pon–pia 8:00–18:00</small>
+          </div>
+        </div>
+        <div class="hero-rating">
+          <div class="stars">★★★★★</div>
+          <div>
+            <div class="num">4.9</div>
+            <div class="src">Google · 412 recenzií</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ───────────────────────────────────── -->
+<section class="trust-strip">
+  <div class="container trust-row">
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-5z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span><strong>Certifikovaná klinika</strong> · Slovenská komora zubných lekárov</span>
+    </div>
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <span><strong>Ošetrenie do 30 minút</strong> bez čakania</span>
+    </div>
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span><strong>Bezbolestné</strong> · sedácia & lokálna anestézia</span>
+    </div>
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+      <span><strong>Online objednanie</strong> 24/7</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ──────────────────────────────────────── -->
+<section class="section" id="sluzby">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Naše služby</span>
+      <h2 class="section-h">Všetko pre váš úsmev<br>na jednom mieste</h2>
+      <p class="section-sub">Od preventívnej starostlivosti po komplexnú estetickú rekonštrukciu — pracujeme s najnovšími technológiami a materiálmi schválenými v EÚ.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card featured reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v6M12 22v-6M9 12c0-3 1-5 3-5s3 2 3 5-1 7-3 7-3-4-3-7z"/><path d="M5 8c1 0 2 1 2 4s-1 5-2 5M19 8c-1 0-2 1-2 4s1 5 2 5"/>
+          </svg>
+        </div>
+        <h3 class="service-h">Implantáty <span style="font: 700 9px/1 var(--f-mono); letter-spacing: 1.5px; color: var(--brand-2); background: rgba(0,184,154,.12); padding: 4px 8px; border-radius: 999px; vertical-align: middle; margin-left: 6px;">CORE</span></h3>
+        <p class="service-p">Titanové implantáty Straumann a Nobel Biocare. Doživotná záruka, 3D plánovanie, hojenie 8–12 týždňov.</p>
+        <div class="service-meta">
+          <span class="service-price">od 890 €</span>
+          <span class="service-link">Detaily <span class="arr">→</span></span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-4 6-6 9-6s7 2 9 6c-2 4-6 6-9 6s-7-2-9-6z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="service-h">Estetické zubné lekárstvo</h3>
+        <p class="service-p">Bielenie, fazety, kompozitné rekonštrukcie. Hollywood smile za 2 návštevy.</p>
+        <div class="service-meta">
+          <span class="service-price">od 120 €</span>
+          <span class="service-link">Detaily <span class="arr">→</span></span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M5 6v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6M9 11h6M9 15h4"/></svg>
+        </div>
+        <h3 class="service-h">Ortodoncia · Invisalign®</h3>
+        <p class="service-p">Neviditeľné rovnátka. Plán liečby s 3D simuláciou pred začiatkom — uvidíte výsledok dopredu.</p>
+        <div class="service-meta">
+          <span class="service-price">od 2 400 €</span>
+          <span class="service-link">Detaily <span class="arr">→</span></span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9h.01M15 9h.01M9 15c1 1 2 2 3 2s2-1 3-2"/></svg>
+        </div>
+        <h3 class="service-h">Detská stomatológia</h3>
+        <p class="service-p">Šetrný prístup pre malých pacientov. Hravé prostredie, rozprávky počas ošetrenia, žiadny strach.</p>
+        <div class="service-meta">
+          <span class="service-price">od 25 €</span>
+          <span class="service-link">Detaily <span class="arr">→</span></span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg>
+        </div>
+        <h3 class="service-h">3D Diagnostika · CBCT</h3>
+        <p class="service-p">Cone-beam CT s minimálnym žiarením. Presné zobrazenie čeľuste pred každým zákrokom.</p>
+        <div class="service-meta">
+          <span class="service-price">od 60 €</span>
+          <span class="service-link">Detaily <span class="arr">→</span></span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M12 8v4l2 2"/></svg>
+        </div>
+        <h3 class="service-h">Pohotovosť · 7 dní</h3>
+        <p class="service-p">Akútna bolesť alebo úraz? Volajte kedykoľvek — prijmeme do 2 hodín, aj cez víkend.</p>
+        <div class="service-meta">
+          <span class="service-price">stacionárna sadzba</span>
+          <span class="service-link">+421 32 555 0123 <span class="arr">→</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ───────────────────────────────────────── -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 7v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-5z"/></svg> Straumann partner</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Invisalign Diamond Provider</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Nobel Biocare</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Planmeca CBCT</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">SKZL certifikácia</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">ISO 9001</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Straumann partner</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Invisalign Diamond Provider</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Nobel Biocare</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Planmeca CBCT</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">SKZL certifikácia</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">ISO 9001</span>
+  </div>
+</div>
+
+<!-- ── 3D SCENE — process explainer ─────────────────── -->
+<section class="scene" id="technologia">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Naša technológia</span>
+      <h2 class="section-h">Pozrite sa, ako pracujeme.<br>Doslova.</h2>
+      <p class="section-sub">Od skenovania po finálnu korunku — celý proces prebieha digitálne. Žiadne odtlačky, žiadne odhady. Otáčajte modelom myšou.</p>
+    </div>
+
+    <div class="scene-stage reveal">
+      <canvas id="scene3d"></canvas>
+      <div class="scene-info" id="sceneInfo">
+        <div class="scene-info-tag" id="sceneTag">01 · Diagnostika</div>
+        <div class="scene-info-h" id="sceneH">CBCT skenovanie</div>
+        <div class="scene-info-p" id="sceneP">3D snímok celej čeľuste s minimálnym žiarením. Hotový za 14 sekúnd.</div>
+      </div>
+      <div class="scene-controls">
+        <button class="scene-btn active" data-step="0">01 · Sken</button>
+        <button class="scene-btn" data-step="1">02 · Plán</button>
+        <button class="scene-btn" data-step="2">03 · Implantát</button>
+        <button class="scene-btn" data-step="3">04 · Korunka</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DOCTORS ───────────────────────────────────────── -->
+<section class="section" id="tim">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Náš tím</span>
+      <h2 class="section-h">Lekári, ktorým môžete<br>dôverovať svoj úsmev</h2>
+      <p class="section-sub">Stomatológovia s medzinárodnými certifikáciami, kontinuálnym vzdelávaním a praxou minimálne 10 rokov.</p>
+    </div>
+
+    <div class="doctors-grid">
+      <div class="doctor-card reveal">
+        <div class="doctor-photo">
+          <!-- TODO: Replace with the doctor's actual photo -->
+          <img src="images/placeholder.svg" alt="Doctor photo — MUDr. Lucia Hrubá" loading="lazy">
+          <span class="doctor-photo-tag">Hlavný lekár</span>
+        </div>
+        <div class="doctor-info">
+          <div class="doctor-name">MUDr. Lucia Hrubá</div>
+          <div class="doctor-role">Implantológia · Estetika</div>
+          <p class="doctor-bio">Atestácia v odbore stomatológia (LFUK Bratislava). Špecializácia v implantológii Straumann. Hovorí slovensky, anglicky a nemecky.</p>
+          <div class="doctor-stats">
+            <div class="doctor-stat">14 rokov<span>prax</span></div>
+            <div class="doctor-stat">2 100+<span>implantátov</span></div>
+            <div class="doctor-stat">SKZL<span>certifikát</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card reveal">
+        <div class="doctor-photo">
+          <!-- TODO: Replace with the doctor's actual photo -->
+          <img src="images/placeholder.svg" alt="Doctor photo — MUDr. Peter Kováč" loading="lazy">
+          <span class="doctor-photo-tag">Ortodoncia</span>
+        </div>
+        <div class="doctor-info">
+          <div class="doctor-name">MUDr. Peter Kováč</div>
+          <div class="doctor-role">Ortodoncia · Invisalign®</div>
+          <p class="doctor-bio">Diamond Provider Invisalign®. Postgraduálne štúdium v Mníchove. Pacienti od 6 do 70 rokov — rovnátka v každom veku.</p>
+          <div class="doctor-stats">
+            <div class="doctor-stat">12 rokov<span>prax</span></div>
+            <div class="doctor-stat">980+<span>liečieb</span></div>
+            <div class="doctor-stat">Diamond<span>Invisalign</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card reveal">
+        <div class="doctor-photo">
+          <!-- TODO: Replace with the doctor's actual photo -->
+          <img src="images/placeholder.svg" alt="Doctor photo — MUDr. Eva Nováková" loading="lazy">
+          <span class="doctor-photo-tag">Detská stomatológia</span>
+        </div>
+        <div class="doctor-info">
+          <div class="doctor-name">MUDr. Eva Nováková</div>
+          <div class="doctor-role">Pediatrická stomatológia</div>
+          <p class="doctor-bio">Špecialistka pre deti a úzkostlivých pacientov. Sedácia rajským plynom. Hravé prostredie, žiadne biele plášte.</p>
+          <div class="doctor-stats">
+            <div class="doctor-stat">10 rokov<span>prax</span></div>
+            <div class="doctor-stat">3 400+<span>malých pacientov</span></div>
+            <div class="doctor-stat">EAPD<span>člen</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ───────────────────────────────────────── -->
+<section class="section" id="galeria" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Naše prostredie</span>
+      <h2 class="section-h">Klinika, kde sa cítite príjemne</h2>
+      <p class="section-sub">Moderne vybavené ordinácie v centre Trenčína. Wi-Fi, kávovar, detský kútik, parkovanie pred budovou.</p>
+    </div>
+
+    <div class="gallery reveal">
+      <div class="gallery-item tall wide">
+        <!-- TODO: Replace with actual clinic photo -->
+        <img src="images/placeholder.svg" alt="Main dental surgery room" loading="lazy">
+        <div class="gallery-cap">Hlavná ordinácia<small>200 m²</small></div>
+      </div>
+      <div class="gallery-item">
+        <!-- TODO: Replace with actual clinic photo -->
+        <img src="images/placeholder.svg" alt="3D CBCT diagnostic device" loading="lazy">
+        <div class="gallery-cap">3D Diagnostika<small>Planmeca</small></div>
+      </div>
+      <div class="gallery-item">
+        <!-- TODO: Replace with actual clinic photo -->
+        <img src="images/placeholder.svg" alt="Reception area" loading="lazy">
+        <div class="gallery-cap">Recepcia<small>vchod</small></div>
+      </div>
+      <div class="gallery-item wide">
+        <!-- TODO: Replace with actual clinic photo -->
+        <img src="images/placeholder.svg" alt="Sterilisation room" loading="lazy">
+        <div class="gallery-cap">Sterilizačný blok<small>autokláv triedy B</small></div>
+      </div>
+      <div class="gallery-item">
+        <!-- TODO: Replace with actual clinic photo -->
+        <img src="images/placeholder.svg" alt="Children's play area" loading="lazy">
+        <div class="gallery-cap">Detský kútik<small>hračky & rozprávky</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ──────────────────────────────────── -->
+<section class="section" id="recenzie">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Recenzie pacientov</span>
+      <h2 class="section-h">8 200 ľudí nemôže byť na omyle</h2>
+      <p class="section-sub">Niektoré z nedávnych recenzií z Google a Facebooku — bez úprav, bez výberu.</p>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"Po rokoch strachu z dentistu som konečne našla miesto, kde sa cítim bezpečne. Pani doktorka Hrubá vysvetlí každý krok dopredu, nič vás neprekvapí. Implantát urobili presne podľa plánu."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JK</div>
+          <div>
+            <div class="testimonial-name">Jana Kollárová</div>
+            <div class="testimonial-meta">Google · pred 2 týždňami</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"Syn (8 rokov) sa pýta, kedy znova pôjdeme. Pani doktorka Nováková z neho urobila kamaráta. Žiadny plač, žiadny strach. Konečne."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MD</div>
+          <div>
+            <div class="testimonial-name">Martin Dvořák</div>
+            <div class="testimonial-meta">Google · pred mesiacom</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"Invisalign za 11 mesiacov, presne podľa simulácie ktorú mi ukázali na začiatku. Cena pevná, žiadne dodatočné poplatky. Odporúčam každému, kto sa hanbí za zuby."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AS</div>
+          <div>
+            <div class="testimonial-name">Andrea Šimková</div>
+            <div class="testimonial-meta">Facebook · pred 3 mesiacmi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOOKING / CONTACT ─────────────────────────────── -->
+<section class="section contact" id="objednanie">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Kontakt & Objednanie</span>
+        <h2 class="section-h">Začnite úsmev<br>jedným klikom.</h2>
+        <p class="section-sub" style="margin-bottom:0">Vyplňte formulár alebo zavolajte. Odpovedáme do 1 pracovnej hodiny, prvá konzultácia je bezplatná.</p>
+
+        <div class="contact-info-list">
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-row-h">Adresa</div>
+              <div class="contact-row-v">Mierové námestie 14, 911 01 Trenčín<small>Centrum mesta · parkovanie pred budovou</small></div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.91.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-row-h">Telefón</div>
+              <div class="contact-row-v"><a href="tel:+421325550123">+421 32 555 0123</a><small>pohotovosť · 7 dní v týždni</small></div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            </div>
+            <div>
+              <div class="contact-row-h">E-mail</div>
+              <div class="contact-row-v"><a href="mailto:objednanie@dentaria.tn">objednanie@dentaria.tn</a><small>odpovedáme do 1 hodiny</small></div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <div class="contact-row-h">Otváracie hodiny</div>
+              <div class="contact-row-v">Pon–Pia · 8:00 – 18:00<small>Sob · 9:00 – 13:00 (objednávky)</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="book-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='✓ Odoslané — ozveme sa do hodiny'; this.querySelector('button').disabled=true;">
+        <h3 class="book-form-h">Objednať konzultáciu</h3>
+        <p class="book-form-sub">Bezplatná, 30 minút, bez záväzku.</p>
+
+        <div class="fld-row">
+          <div class="fld">
+            <span class="lab">Meno</span>
+            <input type="text" placeholder="Jana Nováková" required>
+          </div>
+          <div class="fld">
+            <span class="lab">Telefón</span>
+            <input type="tel" placeholder="+421 905 123 456" required>
+          </div>
+        </div>
+        <div class="fld">
+          <span class="lab">E-mail</span>
+          <input type="email" placeholder="jana@email.sk" required>
+        </div>
+        <div class="fld-row">
+          <div class="fld">
+            <span class="lab">Služba</span>
+            <select required>
+              <option value="">Vyberte —</option>
+              <option>Implantáty</option>
+              <option>Estetické zubné lekárstvo</option>
+              <option>Ortodoncia · Invisalign</option>
+              <option>Detská stomatológia</option>
+              <option>3D Diagnostika</option>
+              <option>Iné / preventívna prehliadka</option>
+            </select>
+          </div>
+          <div class="fld">
+            <span class="lab">Preferovaný termín</span>
+            <input type="date" required>
+          </div>
+        </div>
+        <div class="fld">
+          <span class="lab">Stručný popis (voliteľné)</span>
+          <textarea rows="3" placeholder="Napíšte, s čím vám máme pomôcť…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Odoslať žiadosť <span class="arr">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAP ───────────────────────────────────────────── -->
+<!-- GDPR note: the map iframe below loads from openstreetmap.org (OSMF, UK).
+     It is replaced here with a static placeholder to avoid auto-sending the
+     visitor's IP on page load. Click the link to open the map externally. -->
+<section class="map-section">
+  <!-- TODO: Optionally restore the iframe after adding a cookie-consent gate -->
+  <div class="map-placeholder" aria-hidden="true" style="background:#e8f5f2;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00b89a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span style="font-family:system-ui,sans-serif;font-size:13px;color:#5b6677;">Map hidden — click the link below to open in OpenStreetMap</span>
+  </div>
+  <div class="map-card">
+    <div class="map-card-h">Dentária Trenčín</div>
+    <!-- TODO: Replace address with the actual clinic address -->
+    <div class="contact-row-v" style="font-size:14px">Mierové námestie 14<br>911 01 Trenčín, Slovenská republika</div>
+    <a href="https://www.openstreetmap.org/?mlat=48.895&mlon=18.050#map=16/48.895/18.050" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center;padding:12px;font-size:13px;">Open in OpenStreetMap <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" style="color:#fff">
+          <span class="brand-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3 0-5 2-7 2-1 0-2 1-2 3 0 4 2 8 3 12 0 1 1 2 2 2s1-1 2-3c1-2 1-4 2-4s1 2 2 4c1 2 1 3 2 3s2-1 2-2c1-4 3-8 3-12 0-2-1-3-2-3-2 0-4-2-7-2z"/></svg>
+          </span>
+          Dentária<span class="brand-dot">.</span>tn
+        </a>
+        <p class="footer-tagline">Moderná stomatologická klinika v centre Trenčína. Implantáty, ortodoncia, estetika.</p>
+      </div>
+      <div>
+        <div class="footer-h">Služby</div>
+        <ul class="footer-list">
+          <li><a href="#sluzby">Implantáty</a></li>
+          <li><a href="#sluzby">Invisalign®</a></li>
+          <li><a href="#sluzby">Estetika</a></li>
+          <li><a href="#sluzby">Detská stomatológia</a></li>
+          <li><a href="#sluzby">Pohotovosť</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Klinika</div>
+        <ul class="footer-list">
+          <li><a href="#tim">Náš tím</a></li>
+          <li><a href="#technologia">Technológia</a></li>
+          <li><a href="#galeria">Galéria</a></li>
+          <li><a href="#recenzie">Recenzie</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Kontakt</div>
+        <ul class="footer-list">
+          <li><a href="tel:+421325550123">+421 32 555 0123</a></li>
+          <li><a href="mailto:objednanie@dentaria.tn">objednanie@dentaria.tn</a></li>
+          <li><a>Mierové námestie 14, Trenčín</a></li>
+          <li><a href="#objednanie">Online objednanie</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <!-- TODO: Replace with your company name, registration number, and year -->
+      <span>© 2026 Your Company Name · All rights reserved</span>
+      <span>Designed with ♥ by <a href="https://owlos.sk" target="_blank" rel="noopener" style="color:var(--brand-3)">owlos.sk</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Three.js is self-hosted in /js/ — GDPR compliant, no external requests -->
+<script src="js/three.min.js"></script>
+<script>
+/* ── Reveal-on-scroll ─────────────────────────────── */
+(function(){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+
+/* ── Nav scroll state ─────────────────────────────── */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ── Hero 3D — rotating tooth ─────────────────────── */
+(function(){
+  const canvas = document.getElementById('tooth3d'); if (!canvas || !window.THREE) return;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+
+  function size() {
+    const r = canvas.parentElement.getBoundingClientRect();
+    renderer.setSize(r.width, r.height, false);
+    camera.aspect = r.width / r.height; camera.updateProjectionMatrix();
+  }
+  size(); window.addEventListener('resize', size);
+
+  camera.position.set(0, 0.2, 6.4);
+
+  // tooth — extruded shape suggesting a molar
+  const group = new THREE.Group();
+  scene.add(group);
+
+  const matTooth = new THREE.MeshPhysicalMaterial({
+    color: 0xffffff, roughness: 0.18, metalness: 0.0,
+    clearcoat: 0.9, clearcoatRoughness: 0.15,
+    transmission: 0.06, ior: 1.4, sheen: 0.4, sheenColor: new THREE.Color(0xeaf6f1)
+  });
+
+  // crown — squarish with rounded top
+  const crownGeo = new THREE.SphereGeometry(1.2, 48, 48);
+  crownGeo.scale(1.05, 0.85, 1.0);
+  const crown = new THREE.Mesh(crownGeo, matTooth);
+  crown.position.y = 0.6;
+  group.add(crown);
+
+  // cusps — four bumps on top
+  for (let i=0; i<4; i++) {
+    const ang = (i/4) * Math.PI * 2;
+    const cusp = new THREE.Mesh(new THREE.SphereGeometry(0.42, 28, 28), matTooth);
+    cusp.position.set(Math.cos(ang)*0.55, 1.35, Math.sin(ang)*0.55);
+    group.add(cusp);
+  }
+
+  // roots — two diverging
+  const rootGeo = new THREE.CylinderGeometry(0.32, 0.16, 1.8, 24);
+  const root1 = new THREE.Mesh(rootGeo, matTooth);
+  root1.position.set(-0.45, -0.85, 0); root1.rotation.z = 0.18;
+  const root2 = new THREE.Mesh(rootGeo, matTooth);
+  root2.position.set( 0.45, -0.85, 0); root2.rotation.z = -0.18;
+  group.add(root1, root2);
+
+  // mint accent ring
+  const ringMat = new THREE.MeshBasicMaterial({ color: 0x00b89a, transparent: true, opacity: 0.55 });
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(2.2, 0.012, 12, 96), ringMat);
+  ring.rotation.x = Math.PI/2.3;
+  scene.add(ring);
+
+  // sparkle particles
+  const sparkleGeo = new THREE.BufferGeometry();
+  const N = 60; const pos = new Float32Array(N*3);
+  for (let i=0; i<N; i++) {
+    const r = 2.4 + Math.random()*1.2;
+    const t = Math.random()*Math.PI*2;
+    const p = (Math.random()-0.5)*1.6;
+    pos[i*3]   = Math.cos(t)*r;
+    pos[i*3+1] = p;
+    pos[i*3+2] = Math.sin(t)*r;
+  }
+  sparkleGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const sparkle = new THREE.Points(sparkleGeo, new THREE.PointsMaterial({
+    color: 0x00b89a, size: 0.06, transparent: true, opacity: 0.7
+  }));
+  scene.add(sparkle);
+
+  // lights
+  scene.add(new THREE.AmbientLight(0xffffff, 0.45));
+  const key = new THREE.DirectionalLight(0xffffff, 1.2); key.position.set(3, 4, 5); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x00b89a, 0.8); rim.position.set(-4, 0, -2); scene.add(rim);
+  const fill = new THREE.DirectionalLight(0x4dd5be, 0.4); fill.position.set(2, -3, 4); scene.add(fill);
+
+  // mouse interaction
+  let tx = 0, ty = 0, mx = 0, my = 0;
+  canvas.parentElement.addEventListener('mousemove', (e) => {
+    const r = canvas.getBoundingClientRect();
+    tx = ((e.clientX - r.left)/r.width  - 0.5) * 0.8;
+    ty = ((e.clientY - r.top )/r.height - 0.5) * 0.6;
+  });
+  canvas.parentElement.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
+
+  let t0 = performance.now();
+  function loop() {
+    const t = (performance.now() - t0) * 0.001;
+    mx += (tx - mx) * 0.06;
+    my += (ty - my) * 0.06;
+    group.rotation.y = t * 0.35 + mx * 1.2;
+    group.rotation.x = Math.sin(t*0.5) * 0.08 - my * 0.6;
+    ring.rotation.z = t * 0.5;
+    sparkle.rotation.y = -t * 0.15;
+    renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+/* ── Scene 3D — process explainer ─────────────────── */
+(function(){
+  const canvas = document.getElementById('scene3d'); if (!canvas || !window.THREE) return;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  function size() {
+    const r = canvas.parentElement.getBoundingClientRect();
+    renderer.setSize(r.width, r.height, false);
+    camera.aspect = r.width / r.height; camera.updateProjectionMatrix();
+  }
+  size(); window.addEventListener('resize', size);
+  camera.position.set(0, 1.2, 8);
+  camera.lookAt(0, 0, 0);
+
+  // jaw arc — 8 teeth
+  const jaw = new THREE.Group(); scene.add(jaw);
+  const teeth = [];
+  const matTooth = new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.2, clearcoat: 0.8 });
+  for (let i = 0; i < 8; i++) {
+    const t = (i / 7) * Math.PI - Math.PI/2;
+    const r = 3;
+    const tooth = new THREE.Mesh(new THREE.SphereGeometry(0.45, 24, 24), matTooth.clone());
+    tooth.geometry.scale(1, 0.85, 1.1);
+    tooth.position.set(Math.cos(t)*r, 0, Math.sin(t)*r * 0.5);
+    tooth.rotation.y = t + Math.PI/2;
+    jaw.add(tooth); teeth.push(tooth);
+  }
+  // pick a target tooth (the 4th)
+  const targetIdx = 3; const target = teeth[targetIdx];
+
+  // implant (titanium screw) — hidden initially
+  const implantMat = new THREE.MeshStandardMaterial({ color: 0xc9d2dc, roughness: 0.3, metalness: 0.85 });
+  const implant = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.10, 1.4, 16), implantMat);
+  implant.position.set(target.position.x, -2.5, target.position.z);
+  implant.scale.set(1,0,1);
+  jaw.add(implant);
+
+  // crown — separate piece that descends to fit
+  const crownMat = matTooth.clone(); crownMat.color = new THREE.Color(0xfafdfb);
+  const crown = new THREE.Mesh(new THREE.SphereGeometry(0.45, 24, 24), crownMat);
+  crown.geometry.scale(1, 0.85, 1.1);
+  crown.position.set(target.position.x, 4, target.position.z);
+  crown.scale.set(0,0,0);
+  jaw.add(crown);
+
+  // CBCT scan rays (visible step 0)
+  const scanRays = new THREE.Group();
+  const rayMat = new THREE.LineBasicMaterial({ color: 0x00b89a, transparent: true, opacity: 0.5 });
+  for (let i=0; i<24; i++) {
+    const a = (i/24) * Math.PI * 2;
+    const pts = [ new THREE.Vector3(0, 4, 0), new THREE.Vector3(Math.cos(a)*4, -0.5, Math.sin(a)*2) ];
+    const g = new THREE.BufferGeometry().setFromPoints(pts);
+    scanRays.add(new THREE.Line(g, rayMat));
+  }
+  scanRays.visible = false; scene.add(scanRays);
+
+  // plan markers (step 1)
+  const planMat = new THREE.LineBasicMaterial({ color: 0x4dd5be, transparent: true, opacity: 0.8 });
+  const planLine = (() => {
+    const pts = [
+      new THREE.Vector3(target.position.x, 2.2, target.position.z),
+      new THREE.Vector3(target.position.x, -2.2, target.position.z),
+    ];
+    return new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), planMat);
+  })();
+  planLine.visible = false; scene.add(planLine);
+  const planRing = new THREE.Mesh(new THREE.TorusGeometry(0.35, 0.02, 8, 32), new THREE.MeshBasicMaterial({ color: 0x00b89a }));
+  planRing.position.set(target.position.x, 0, target.position.z); planRing.rotation.x = Math.PI/2; planRing.visible = false;
+  scene.add(planRing);
+
+  // lights
+  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  const key = new THREE.DirectionalLight(0xffffff, 1.0); key.position.set(3, 6, 4); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x00b89a, 0.7); rim.position.set(-3, 2, -3); scene.add(rim);
+
+  // step state
+  const STEPS = [
+    { tag: '01 · Diagnostika', h: 'CBCT skenovanie', p: '3D snímok celej čeľuste s minimálnym žiarením. Hotový za 14 sekúnd.' },
+    { tag: '02 · Plán',         h: 'Digitálne plánovanie', p: 'Pred zákrokom presne vypočítame uhol, hĺbku a typ implantátu v softvéri.' },
+    { tag: '03 · Implantát',    h: 'Vsadenie implantátu', p: 'Titánový implantát Straumann pod lokálnou anestéziou. Hojenie 8–12 týždňov.' },
+    { tag: '04 · Korunka',      h: 'Finálna korunka',    p: 'Zirkónová korunka vyrobená na CAD/CAM mlyne. Farba a tvar na mieru.' },
+  ];
+  let step = 0;
+  const sceneTag = document.getElementById('sceneTag');
+  const sceneH   = document.getElementById('sceneH');
+  const sceneP   = document.getElementById('sceneP');
+
+  function setStep(s) {
+    step = s;
+    document.querySelectorAll('.scene-btn').forEach((b,i)=>b.classList.toggle('active', i===s));
+    sceneTag.textContent = STEPS[s].tag;
+    sceneH.textContent   = STEPS[s].h;
+    sceneP.textContent   = STEPS[s].p;
+  }
+  document.querySelectorAll('.scene-btn').forEach((b,i)=>b.addEventListener('click', ()=>setStep(i)));
+
+  let t0 = performance.now();
+  function loop() {
+    const t = (performance.now() - t0) * 0.001;
+    jaw.rotation.y = Math.sin(t * 0.25) * 0.4;
+
+    // smooth state transitions
+    scanRays.visible = step === 0;
+    if (step === 0) {
+      scanRays.rotation.y = t * 0.6;
+      target.material.emissive = new THREE.Color(0x00b89a);
+      target.material.emissiveIntensity = 0.15 + Math.abs(Math.sin(t*2)) * 0.25;
+    } else {
+      target.material.emissiveIntensity = 0;
+    }
+
+    planLine.visible = step === 1;
+    planRing.visible = step === 1;
+    if (step === 1) planRing.rotation.z = t * 1.2;
+
+    // implant rises in step 2
+    const implantTarget = step >= 2 ? 1 : 0;
+    implant.scale.y += (implantTarget - implant.scale.y) * 0.06;
+    const implantY = step >= 2 ? target.position.y - 0.2 : -2.5;
+    implant.position.y += (implantY - implant.position.y) * 0.06;
+
+    // tooth fades when step >= 2 (replaced)
+    const toothOpacityTarget = step >= 2 ? 0 : 1;
+    target.material.transparent = true;
+    target.material.opacity += (toothOpacityTarget - target.material.opacity) * 0.06;
+
+    // crown descends in step 3
+    const crownScaleTarget = step === 3 ? 1 : 0;
+    crown.scale.x += (crownScaleTarget - crown.scale.x) * 0.06;
+    crown.scale.y = crown.scale.x; crown.scale.z = crown.scale.x;
+    const crownY = step === 3 ? target.position.y : 4;
+    crown.position.y += (crownY - crown.position.y) * 0.06;
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  // auto-cycle as a hint
+  let auto = setInterval(()=>setStep((step+1)%4), 6000);
+  document.querySelectorAll('.scene-btn').forEach(b=>b.addEventListener('click', ()=>{clearInterval(auto); auto=null;}));
+})();
+</script>
+<script>
+/* Demo banner dismissal — localStorage persists across page reloads */
+(function () {
+  var KEY = 'owlos-demo-dismissed';
+  var banner = document.getElementById('owlos-demo-banner');
+  if (!banner) return;
+  if (localStorage.getItem(KEY)) { banner.remove(); return; }
+  document.getElementById('owlos-demo-ok').addEventListener('click', function () {
+    banner.remove();
+    localStorage.setItem(KEY, '1');
+  });
+}());
+</script>
+
+</body>
+</html>
